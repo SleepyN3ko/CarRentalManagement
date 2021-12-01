@@ -42,6 +42,7 @@ namespace CarRentalManagement.Server.Controllers
             //var Vehicle = await _context.Vehicles.FindAsync(id);
             var Vehicle = await _unitOfWork.Vehicles.Get(q => q.Id == id);
 
+
             if (Vehicle == null)
             {
                 return NotFound();
